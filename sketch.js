@@ -1,24 +1,13 @@
-var seed = 0;
-
 function setup() {
   createCanvas(500, 500);
-  circleX = 50;
-  randomSeed(seed);
-  noStroke();
+  background(255);
 }
 
 function draw() {
-    // console.log(x);
-    // background(0);
-
+    fill(255, 0, 0, 50);
+    circle(mouseX, mouseY, 100, 100);
 }
 
 function mousePressed() {
-  seed += 100;
-  for (i = 0; i < width; i++) {
-    for (j = 0; j < height; j++) {
-      fill(random(256));
-      rect(i, j, 1, 1);
-    }
-  }
+  background(255);
 }
