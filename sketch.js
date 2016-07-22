@@ -6,7 +6,7 @@ function setup() {
 function draw() {
     fill(255, 0, 0, 50);
     noStroke();
-    circle(mouseX, mouseY, 100, 100);
+    ellipse(mouseX, mouseY, 100, 100);
 }
 
 function mousePressed() {
