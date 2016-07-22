@@ -1,16 +1,24 @@
-var x = 0;
+var seed = 0;
 
 function setup() {
-  createCanvas(320, 240);
+  createCanvas(500, 500);
+  circleX = 50;
+  randomSeed(seed);
+  noStroke();
 }
 
 function draw() {
     // console.log(x);
-    background(0);
-    ellipse(x, 120, 16, 16);
+    // background(0);
 
-    x += 1;
-    if (x > width) {
-      x = 0;
+}
+
+function mousePressed() {
+  seed += 100;
+  for (i = 0; i < width; i++) {
+    for (j = 0; j < height; j++) {
+      fill(random(256));
+      rect(i, j, 1, 1);
     }
+  }
 }
